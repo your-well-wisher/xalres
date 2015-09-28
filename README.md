@@ -1,0 +1,3 @@
+# xalres
+
+Xalrus is a preprocessor that replaces delays for SDK 6.1 and text for HD44780 LCD table. If you're here, you know what it is used for...
