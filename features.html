@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/foundation.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<title>Xalres</title>
+	<script>
+		$(document).ready(function() {
+			$(document).foundation();
+		});
+	</script>
+</head>
+<body>
+	<div class="contain-to-grid sticky">
+		<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="index.html">Xalres</a></h1>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			</ul>
+
+			<section class="top-bar-section">
+				<ul class="right">
+					<li class="active"><a href="features.html">Возможности</a></li>
+				</ul>
+			</section>
+		</nav>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<h1>Возможности</h1>
+			<h2>Задержки</h2>
+			<div class="large-4 columns">
+				<h3>VHDL</h3>
+				<img class="th" src="img/vhdldelay.gif" alt="">
+			</div>
+			<div class="large-4 columns">
+				<h3>AHDL</h3>
+				<img class="th" src="img/ahdldelay.gif" alt="">
+			</div>
+			<div class="large-4 columns">
+				<h3>Verilog</h3>
+				<img class="th" src="img/verilogdelay.gif" alt="">
+			</div>
+		</div>
+		<div class="large-12 columns" style="margin-top: 15px;">
+			<h3>Использование</h3>
+			<p>
+				В необходимом месте ставится метка вида <code>%%</code> с необходимой задержкой внутри.
+				Поддерживаемые размерности: <code>ns, us, ms</code> (наносекунды, микросекунды, миллисекунды соответственно).
+				Пример написания:
+			</p>
+			<code class="hdl-code">DELAY &lt;= %4.1ms%;</code>
+			<p>Далее необходимо перетащить исходник на ехе файл. После преобазования увидим:</p>
+			<code class="hdl-code">
+				DELAY &lt;= <span style="color: #0000DD; font-weight: bold">16#280a0#</span>; <span style="color: #888888">-- 4.1ms</span>
+			</code>
+			<p>Как видно, метка была заменена на необходимую задержку. Также присутствует комментарий с оригинальным значением внутри метки.</p>
+			<h2>Замена текста</h2>
+			<div class="large-4 columns">
+				<h3>VHDL</h3>
+				<img class="th" src="img/vhdltext.gif" alt="">
+			</div>
+			<div class="large-4 columns">
+				<h3>AHDL</h3>
+				<img class="th" src="img/ahdltext.gif" alt="">
+			</div>
+			<div class="large-4 columns">
+				<h3>Verilog</h3>
+				<img class="th" src="img/verilogtext.gif" alt="">
+			</div>
+		</div>
+		<div class="large-12 columns" style="margin-top: 15px;">
+			<h3>Использование</h3>
+			<p>
+				В необходимом месте ставится метка вида <code>T%%</code> с необходимым текстом внутри, включая и русские символы
+				Пример написания:
+			</p>
+			<code class="hdl-code"><span style="color: #008800; font-weight: bold">constant</span> str_high : <span style="color: #333399; font-weight: bold">std_logic_vector</span> (<span style="color: #0000DD; font-weight: bold">247</span> <span style="color: #008800; font-weight: bold">downto</span> <span style="color: #0000DD; font-weight: bold">0</span>) := T%English supported, русский тоже%;</code>
+			<p>Далее необходимо перетащить исходник на ехе файл. После преобазования увидим:</p>
+			<code class="hdl-code"><span style="color: #008800; font-weight: bold">
+				constant</span> str_high : <span style="color: #333399; font-weight: bold">std_logic_vector</span> (<span style="color: #0000DD; font-weight: bold">247</span> <span style="color: #008800; font-weight: bold">downto</span> <span style="color: #0000DD; font-weight: bold">0</span>) := X<span style="background-color: #fff0f0">&quot;456e676c69736820737570706f727465642c2070796363bab8b920bf6fb665&quot;</span>; <span style="color: #888888">-- English supported, русский тоже</span>
+			</code>
+			<p class="subheader">В примере используется строка менее 40 символов. При компиляции проектов для макета лучше конечно использовать строки длинной 40 символов.</p>
+			<p class="subheader">Также следует сказать, что особенности каждого языка учитываются!</p>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel">
+				<h4>Заинтересовались?</h4>
+				<div class="row">
+					<div class="large-9 columns">
+						<p>Нажмите на кнопку, чтобы скачать!</p>
+					</div>
+					<div class="large-3 columns">
+						<a href="#" class="radius button right">Загрузить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="row">
+		<div class="large-12 columns">
+			<hr>
+			<div class="row">
+				<div class="large-6 columns end">
+					<p>© Copyright nobody</p>
+				</div>
+			</div>
+		</div> 
+	</footer>
+</body>
+</html>

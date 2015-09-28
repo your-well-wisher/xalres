@@ -1,0 +1,21 @@
+.moto {
+	margin: 30px auto;
+}
+
+.hdl-code {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.feature-icon {
+	font-size: 60px;
+	background-color: #008cba;
+	padding: 7px 10px;
+	border-radius: 7%;
+	color: white;
+	margin-bottom: 15px;
+}
+
+.feature-text {
+	font-size: 18px;
+}
